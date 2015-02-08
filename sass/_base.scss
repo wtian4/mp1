@@ -89,7 +89,7 @@ nav {
 .backgroundText {
     width: 50%;
     margin: 0 auto;
-    padding-top: 3rem;
+    padding-top: 6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: #FFFFFF;
@@ -105,25 +105,25 @@ footer {
 
 footer .social_fb {
     include: social_icons;
-    background-image: url('social_fb.png');
+    background-image: url('../content/social_fb.png');
 }
 
 footer .social_g {
     include: social_icons;
-    background: url('social_g.png');
+    background: url('../content/social_g.png');
 }
 
 footer .social_in {
     include: social_icons;
-    background: url('social_in.png');
+    background: url('../content/social_in.png');
 }
 
 footer .social_twt {
     include: social_icons;
-    background: url('social_twt.png');
+    background: url('../content/social_twt.png');
 }
 
-.backgroundText {
+.footerText {
     width: 50%;
     margin: 0 auto;
     padding-top: 1em;
