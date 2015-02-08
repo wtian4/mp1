@@ -103,31 +103,6 @@ footer {
     text-align: center;
 }
 
-footer .social_fb {
-
-    background-image: url('../content/social_fb.png');
-    background-size: 100%;
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-    margin: 2em .8em 0 .8em;
-}
-
-footer .social_g {
-    include: social_icons;
-    background: url('../content/social_g.png');
-}
-
-footer .social_in {
-    include: social_icons;
-    background: url('../content/social_in.png');
-}
-
-footer .social_twt {
-    include: social_icons;
-    background: url('../content/social_twt.png');
-}
-
 .footerText {
     width: 50%;
     margin: 0 auto;
