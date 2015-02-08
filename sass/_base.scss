@@ -99,5 +99,31 @@ nav {
 footer {
     width: 100%;
     height: 8em;
-    background-color: $header;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+footer .social_fb {
+    background-image: url('social_fb.png');
+}
+
+footer .social_g {
+    background: url('social_g.png');
+}
+
+footer .social_in {
+    background: url('social_in.png');
+}
+
+footer .social_twt {
+    background: url('social_twt.png');
+}
+
+.backgroundText {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: $white;
 }

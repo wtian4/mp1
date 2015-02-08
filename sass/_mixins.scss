@@ -1,0 +1,12 @@
+@mixin social_icons {
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin: 4em .8em 0 .8em;
+}
+
+.social_fb {@include social_icons;}
+.social_g {@include social_icons;}
+.social_in {@include social_icons;}
+.social_twt {@include social_icons:}
