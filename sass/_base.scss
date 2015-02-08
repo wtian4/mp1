@@ -2,6 +2,10 @@
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
 
+body {
+	padding-top: 5rem;	
+}
+
 h1 {
   font-size: 2.2rem;
   color: lighten($orange, 25);
@@ -22,7 +26,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background-color: antiquewhite;
+    background-color: $brown;
     height: 5rem;
 
 }
@@ -49,10 +53,15 @@ nav {
 
 	a {
     	text-decoration: none;
+    	font-family: 'Open Sans', sans-serif;
+  		font-weight: 400;
+  		color: $white;
+
 	}
 
 	li {
     	margin: 0 1.4rem 0 1.4rem;
+
 	}
 
 	.navTitle {
