@@ -104,18 +104,22 @@ footer {
 }
 
 footer .social_fb {
+    include: social_icons;
     background-image: url('social_fb.png');
 }
 
 footer .social_g {
+    include: social_icons;
     background: url('social_g.png');
 }
 
 footer .social_in {
+    include: social_icons;
     background: url('social_in.png');
 }
 
 footer .social_twt {
+    include: social_icons;
     background: url('social_twt.png');
 }
 
