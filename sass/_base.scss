@@ -104,8 +104,13 @@ footer {
 }
 
 footer .social_fb {
-    include: social_icons;
+
     background-image: url('../content/social_fb.png');
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin: 2em .8em 0 .8em;
 }
 
 footer .social_g {
