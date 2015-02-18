@@ -2,36 +2,32 @@
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
 
+
 body {
 	padding-top: 5rem;
 	background-color: $white;
+    max-width: 1273px; /* website is not size responsive, will show improper results on different width sizes */
+    min-width: 1273px;
 }
 
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-}
-
-.test {
-  font-size: 1.2rem;
-  color: $blue;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-}
-
-
+/* Navigation Wrapper */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: $header;
-    height: 5rem;
+    z-index: 20; /* so its always on top */
+    height: 5em;
 
+    /* CSS Transitions for Nav Bar Resizing */
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
 }
 
+/* Navigation Bar */
 nav {
 	.container {
 	    display: table;
@@ -41,7 +37,7 @@ nav {
 	    width: 100%;
 	}
 
-	.containerHelper {
+	.containerHelper { /* We vertically center the text in the nav bar using the table*/
 	    display: table-cell;
 	    vertical-align: middle;
 	}	
@@ -53,16 +49,18 @@ nav {
 	}
 
 	a {
-    	text-decoration: none;
-    	font-family: 'Open Sans', sans-serif;
-  		font-weight: 600;
-  		color: $white;
-
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: $bold;
+      color: $white;
 	}
+
+    .nav-active {
+        color:$orange;
+    }
 
 	li {
     	margin: 0 1.4rem 0 1.4rem;
-
 	}
 
 	.navTitle {
@@ -74,15 +72,237 @@ nav {
 	}
 }
 
+/* Video Section (AKA Home) */
+.backgroundVideo {
+    height: 22em;
+    overflow: hidden;
+    display: block;
+    width: 100%;
 
-.backgroundImage {
-    background: url('../content/bg.jpg');
-    background-size: 100%;
+    video {
+        padding: 0;
+        margin-bottom: -22em;
+        position: relative;
+        z-index: 1;
+    }
+
+    .videoText { /* We put the video text above the video and center it horizontally */
+        font-family: $font-primary;
+        font-weight: $bold;
+        color: #FFFFFF;
+        font-size: 4rem;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .videoSubtitle {
+        font-family: $font-primary;
+        font-weight: $normal;
+        color: #FFFFFF;
+        font-size: 2rem;
+        width: 48%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 10;
+    }
+}
+
+/* 3 Columns Implement with Float and Margin Manipulation.
+   Columns implemented in CSS3 is in the modal section */
+.backgroundColumn {
     margin: 0;
     border: 0;
     padding: 0;
     width: 100%;
     height: 25em;
+    background-color: $white;
+    text-align: center;
+
+    .columnText { /* Header "Why Orange and Blue" */
+        font-family: $font-primary;
+        font-weight: $normal;  
+        color: #00000;
+        font-size: 2rem;
+        margin: 0 auto;
+        margin-top: 1em;
+        width: 50%;
+    }
+
+    .colDescriptionText { /* Description of each category */
+        font-family: $font-primary;
+        font-weight: $normal;  
+        color: #00000;
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin: 0 50px 0 50px;
+    }
+
+    .colTitleText { /* Title of Category */
+        font-family: $font-primary;
+        font-weight: $bold;  
+        color: #00000;
+        font-size: 2rem;
+        margin: 0 auto;
+        margin-top: .6rem;
+        width: 50%;  
+        margin-top: -3px;
+    }
+
+    .columnContainer {
+        margin-top: .5em;
+
+        .columnLeft{
+            float: left;
+            width: 33%;
+        }
+
+        .columnRight {
+            float: right;
+            width: 33%;
+        }
+
+        .columnCenter {
+            display: inline-block;
+            width: 34%;
+        }
+    }
+}
+
+/* Carousel */
+.backgroundCarousel {
+    width: 100%;
+    height: 25em;
+
+    #carouselContent {
+    /* The carousel is implemented by having a very long image made from each image in the list
+       Our viewport only displays one part of the long image */
+        overflow:hidden;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            text-align: center;
+            height: 25em;
+            list-style: none;
+            float:  left;
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    #carouselPic1{
+        background: $carousel-pic1;
+    }
+
+    #carouselPic2{
+        background: $carousel-pic2;
+    }
+
+    #carouselPic3{
+        background: $carousel-pic3;
+    }
+
+    #carouselPic4{
+        background: $carousel-pic4;
+    }
+
+    #carouselPic5{
+        background: $carousel-pic5;
+    }
+
+    .carouselLeft { /* Arrow Left for carousel */
+        cursor: pointer;
+        position: absolute;
+        z-index: 15;
+        margin-top: 5em;
+        left: 1%;
+        color: $white;
+    }
+    
+    .carouselRight { /* Arrow Right for carousel */
+        cursor: pointer;
+        position: absolute;
+        z-index: 14;
+        margin-top: 5em;
+        left: 97%;
+        color: $white;
+    }
+
+    .carouselHelper{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* Title for Admissions Section */
+.admissionsText {
+    font-family: $font-primary;
+    font-weight: $bold;  
+    color: #00000;
+    font-size: 2em;
+    
+    margin-top: 10px;
+    text-align: center;
+}
+    
+/* Modal implemented with CSS3 Columns */
+.modalColumn {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;    
+    height: 16em;
+    margin: 3em 0em 3em 0em;
+
+}
+
+.modalContainer {
+    width: 50%;
+    margin: 0 auto;
+
+    img { /* This is the modal-before picture */
+        max-width: 100%;
+        border-radius: $default-border-radius;
+    }
+}
+
+/* This is the modal-after picture */
+.modalPicture {
+    cursor: pointer;
+    background-color: rgba($modalWhite, 0.83);
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    overflow-y: scroll;
+    position: fixed;
+    text-align: center;
+    z-index: 50;
+}
+
+/* Fixed Background Picture */
+.backgroundImage {
+    background: $bg;
+    background-size: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 30em;
+    background-attachment:fixed;
 
 }
 
@@ -90,15 +310,16 @@ nav {
     width: 50%;
     margin: 0 auto;
     padding-top: 6rem;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    color: #FFFFFF;
+    font-family: $font-primary;
+    font-weight: $bold;
+    color: $white;
     font-size: 3rem;
 }
 
+/* Footer */
 footer {
     width: 100%;
-    height: 8em;
+    height: 15em;
     background-color: $header;
     text-align: center;
 }
@@ -107,7 +328,24 @@ footer {
     width: 50%;
     margin: 0 auto;
     padding-top: 1em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: $font-primary;
+    font-weight: $normal;
     color: $white;
 }
+
+.socialIcons {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+

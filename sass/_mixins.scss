@@ -1,16 +1,30 @@
-@mixin social_icons($pathToIcon) {
-	background: url($pathToIcon);
+@mixin col_icons($pathToIcon) {
+    background: url($pathToIcon);
     background-size: 100%;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 48px;
     display: inline-block;
-    margin: 3em .8em 0 .8em;
-}
+    margin-top: 2em;
+} /* this is the mixin for the 'why' section icons */
 
-.social_fb {@include social_icons('../content/social_fb.png');}
-.social_g {@include social_icons('../content/social_g.png');}
-.social_in {@include social_icons('../content/social_in.png');}
-.social_twt {@include social_icons('../content/social_twt.png');}
+.education-icon {@include col_icons('../content/education.png');}
+.leadership-icon {@include col_icons('../content/leadership.png');}
+.opportunity-icon {@include col_icons('../content/opportunity.png');}
+.network-icon {@include col_icons('../content/friends.png');}
+.research-icon {@include col_icons('../content/research.png');}
+.competition-icon {@include col_icons('../content/sports.png');}
 
+@mixin modal_Text() {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;  
+    color: #00000;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: .2rem;
+    text-align:center;
+} /* this is the mixin for the modal text */
 
+.modalLeftText{@include modal_Text(); }
+.modalCenterText{@include modal_Text(); }
+.modalRightText{@include modal_Text(); }
 

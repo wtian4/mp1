@@ -1,49 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MP1 Starter</title>
+    <meta charset="UTF-8">
+    <title>MP1: UIUC Promo Page</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" type="image/png" href="../content/favi.png"/><!--Favicon-->
 
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="lib/jquery-2.1.3.min/index.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
-<body>
-	<header>
 
-    <nav>
+<body>
+
+<section id="home"><!--This is simply for the navigation scroll to reference to-->
+</section>
+
+<header>
+    <nav><!-- Navigation Bar -->
         <div class="container">
             <div class="containerHelper">
                 <ul class="navItems">
-                    <li class="navTitle"><a href="default.asp">Winfield Tian</a></li>
-                    <li class="navShortcuts"><a href="default.asp">Home</a></li>
-                    <li class="navShortcuts"><a href="news.asp">News</a></li>
-                    <li class="navShortcuts"><a href="contact.asp">Contact</a></li>
-                    <li class="navShortcuts"><a href="about.asp">About</a></li>
+                    <li class="navTitle"><a href="#home" id="navScrollHome">University of Illinois Urbana-Champaign</a></li>
+                    <li class="navShortcuts"><a href="#follow_us" id="navScrollFollow">Follow</a></li>
+                    <li class="navShortcuts"><a href="#me" id="navScrollMe">Admissions</a></li>
+                    <li class="navShortcuts"><a href="#learn" id="navScrollLearn">Gallery</a></li>
+                    <li class="navShortcuts"><a href="#why" id="navScrollWhy">Why</a></li>
                 </ul>
             </div>
         </div>
-
-
     </nav>
 </header>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is not Anthony.</div>
 
-  <script src="js/script.js"></script>
-  <script src="lib/jquery-2.1.3.min/index.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+<!-- Video -->
+<section class="backgroundVideo">
+    <video autoplay loop muted preload="auto">
+        <source src="../content/video.mp4" type="video/mp4">
+        Your browser does not support the video tag
+    </video>
+    <div class='videoText'>Success Starts Here</div>
+    <div class='videoSubtitle'>University of Illinois Urbana-Champaign</div>
+</section>
 
-<section class="backgroundImage">
-    <div class="backgroundText">Discover Something New</div>
+<!-- 3 Columns Implemented with float and margin manipulation-->
+<section class="backgroundColumn" id="why">
+    <div class="columnText">Why Orange and Blue?</div>
+        <div class="columnContainer">
+            <div class="columnLeft">
+                <div class="leadership-icon"></div>
+                <div class="colTitleText">Leadership</div>
+                <div class="colDescriptionText">Get Involved in One of Thousands of Student Organizations</div>
+
+                <div class="network-icon"></div>
+                <div class="colTitleText">Network</div>
+                <div class="colDescriptionText">Create New Relationships and Form Connections for the Future</div>
+
+            </div>
+            <div class="columnCenter">
+                <div class="education-icon"></div>
+                <div class="colTitleText">Education</div>
+                <div class="colDescriptionText">Receive a Degree from a Top Public School in the Nation</div>
+
+                <div class="research-icon"></div>
+                <div class="colTitleText">Research</div>
+                <div class="colDescriptionText">Help Solve Some of the World's Most Difficult Problems</div>
+            </div>
+            <div class="columnRight">
+                <div class="opportunity-icon"></div>
+                <div class="colTitleText">Opportunity</div>
+                <div class="colDescriptionText">Semiannual Career Fairs and Networking Events from Fortune 500 Companies</div>
+
+                <div class="competition-icon"></div>
+                <div class="colTitleText">Competition</div>
+                <div class="colDescriptionText">Join the Big 10 Family and Support Our Huge School Spirit</div>
+            </div>
+        </div>
+</section>
+
+<!-- Carousel -->
+<section class="backgroundCarousel" id="learn">
+    <i class="fa fa-arrow-left fa-2x carouselLeft"></i>
+    <i class="fa fa-arrow-right fa-2x carouselRight"></i>
+    <div id="carouselHelper">
+        <div id="carouselContent">
+        <ul>
+            <li id="carouselPic1"></li>
+            <li id="carouselPic2"></li>
+            <li id="carouselPic3"></li>
+            <li id="carouselPic4"></li>
+            <li id="carouselPic5"></li>
+        </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 3 Modals Implemented with CSS3 Columns -->
+<div class="admissionsText">The Admissions Process</div>
+<section class="modalColumn" id="me">
+
+    <div class="modalContainer">
+
+        <a href="http://i.imgur.com/vtYqrU1.png" class="modalPictureHit"><img src="http://i.imgur.com/8oqzpcb.jpg"></a>            
+        <div class="modalLeftText">Prospectors</div>
+    
+        <a href="http://i.imgur.com/llnUrXG.png" class="modalPictureHit"><img src="http://i.imgur.com/nlk84DE.jpg"></a>
+        <div class="modalCenterText">Transfers</div>
+        
+        <a href="http://i.imgur.com/0qDD2K3.png" class="modalPictureHit"><img src="http://i.imgur.com/Mb22MjU.jpg"></a>
+        <div class="modalRightText">Graduates</div>
+    </div>
+</section>
+
+<!-- Fixed Background Img -->
+<section class="backgroundImage" id="follow_us">
+    <div class="backgroundText">Discover Your Future Here</div>
 </section>
 
 <footer>
     <div class="footerText">Follow Us On Social Media</div>
-    <div class="social_fb"></div>
-    <div class="social_g"></div>
-    <div class="social_in"></div>
-    <div class="social_twt"></div>
+    <a href="https://www.facebook.com/illinois.edu"><i class="fa fa-facebook-square fa-3x socialIcons"></i></a>
+    <a href="https://twitter.com/illinois_alma"><i class="fa fa-twitter-square fa-3x socialIcons"></i></a>
+    <a href="https://www.linkedin.com/edu/university-of-illinois-at-urbana-champaign-18321"><i class="fa fa-linkedin-square fa-3x socialIcons"></i></a>
+    <a href="https://plus.google.com/115050777244952217317"><i class="fa fa-google-plus-square fa-3x socialIcons"></i></a>
 </footer>
 
 </body>
