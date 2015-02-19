@@ -1,6 +1,7 @@
 $(document).ready(function(){
- // if ($( window ).width() > 1273)
-  //  alert("Thanks for visiting my website! Just a tip that it is best viewed at ~1273px or lower. This is because my video and carousel pictures are not bigger than this width so weird results may occur");
+  if ($( window ).width() > 1273)
+    alert("Thanks for visiting my website! Just a tip that it is best viewed at ~1273px or lower. This is because my video and carousel pictures are not bigger than this width so weird results may occur");
+ 
   /* Navigation Bar Resizing 
      whenever I scroll past 80pixels (or 5em), it will shrink */
   var navShrinkHeight = 80; //5em
