@@ -6,8 +6,7 @@
 body {
 	padding-top: 5rem;
 	background-color: $white;
-    max-width: 1273px; /* website is not size responsive, will show improper results on different width sizes */
-    min-width: 1273px;
+    min-width: 785px;
 }
 
 header {
@@ -24,6 +23,7 @@ nav {
     z-index: 20; /* so its always on top */
     height: 5em;
     width: 100%;
+
 
     /* CSS Transitions for Nav Bar Resizing */
     transition: all 0.4s;
@@ -262,6 +262,7 @@ nav {
     column-count: 3;    
     height: 16em;
     margin: 3em 0em 3em 0em;
+    max-height: 16em;
 
 }
 
@@ -306,8 +307,7 @@ nav {
 }
 
 .backgroundText {
-    width: 50%;
-    margin: 0 auto;
+    text-align: center;
     padding-top: 6rem;
     font-family: $font-primary;
     font-weight: $bold;

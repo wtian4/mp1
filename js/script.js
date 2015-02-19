@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+  if ($( window ).width() > 1273)
+    alert("Thanks for visiting my website! Just a tip that it is best viewed at ~1273px or lower. This is because my video and carousel pictures are not bigger than this width so weird results may occur");
   /* Navigation Bar Resizing 
      whenever I scroll past 80pixels (or 5em), it will shrink */
   var navShrinkHeight = 80; //5em
@@ -94,12 +95,16 @@ $(document).ready(function(){
       top:$vid.offset().top*3/4 + (($vid.height()/4) - ($vidSubtitle.height()/2)),
   });​
 
+  if ($( window ).width() < 1273){
+    $('.videoText').css({"width":$( window ).width()});
+    $('.videoSubtitle').css({"width":$( window ).width()});
+  }
   /* Initiate Carousel Width */
-  $('#carouselContent ul').css({width:6365});
-  $('#carouselContent ul').css({"margin-left": -1273});
-  $('#carouselContent li').css({width:1273});
-  $('#carouselContent').css({width: 1273});
-    
+  $('#carouselContent ul').css({width: ($( window ).width()*5)});
+  $('#carouselContent ul').css({"margin-left": -1*($( window ).width())});
+  $('#carouselContent li').css({width: ($( window ).width())});
+  $('#carouselContent').css({width: ($( window ).width())});
+  
 
   /* Carousel SlideShow Animation */
   //the carousel is actually one long image, created by appending every image in the list together
@@ -108,7 +113,7 @@ $(document).ready(function(){
   var carouselTimer;
   function carouselInit(){
       carouselTimer = setInterval(function(){
-        $("#carouselContent ul").animate({marginLeft: -2546},500,function(){
+        $("#carouselContent ul").animate({marginLeft:-2*$( window ).width()},500,function(){
           $(this).find("li:last").after($(this).find("li:first"));
           $(this).css({marginLeft:-1*($( window ).width())});
         })
@@ -133,7 +138,7 @@ $(document).ready(function(){
   //since we're moving with the default transition, we will take the first element of the list and place it last
    $(".carouselRight").click(function(){
         clearInterval(carouselTimer);
-        $("#carouselContent ul").animate({marginLeft: -2546},500,function(){
+        $("#carouselContent ul").animate({marginLeft: -2*$( window ).width()},500,function(){
           $(this).find("li:last").after($(this).find("li:first"));
           $(this).css({marginLeft:-1*($( window ).width())});
         });
