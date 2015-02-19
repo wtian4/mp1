@@ -95,10 +95,10 @@ $(document).ready(function(){
   });​
 
   /* Initiate Carousel Width */
-  $('#carouselContent ul').css({width: ($( window ).width()*5)});
-  $('#carouselContent ul').css({"margin-left": -1*($( window ).width())});
-  $('#carouselContent li').css({width: ($( window ).width())});
-  $('#carouselContent').css({width: ($( window ).width())});
+  $('#carouselContent ul').css({width:6365});
+  $('#carouselContent ul').css({"margin-left": -1273});
+  $('#carouselContent li').css({width:1273});
+  $('#carouselContent').css({width: 1273});
     
 
   /* Carousel SlideShow Animation */
@@ -108,7 +108,7 @@ $(document).ready(function(){
   var carouselTimer;
   function carouselInit(){
       carouselTimer = setInterval(function(){
-        $("#carouselContent ul").animate({marginLeft:-2*$( window ).width()},500,function(){
+        $("#carouselContent ul").animate({marginLeft: -2546},500,function(){
           $(this).find("li:last").after($(this).find("li:first"));
           $(this).css({marginLeft:-1*($( window ).width())});
         })
@@ -133,7 +133,7 @@ $(document).ready(function(){
   //since we're moving with the default transition, we will take the first element of the list and place it last
    $(".carouselRight").click(function(){
         clearInterval(carouselTimer);
-        $("#carouselContent ul").animate({marginLeft: -2*$( window ).width()},500,function(){
+        $("#carouselContent ul").animate({marginLeft: -2546},500,function(){
           $(this).find("li:last").after($(this).find("li:first"));
           $(this).css({marginLeft:-1*($( window ).width())});
         });

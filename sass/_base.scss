@@ -10,6 +10,10 @@ body {
     min-width: 1273px;
 }
 
+header {
+    width: 100%;
+}
+
 /* Navigation Wrapper */
 nav {
     position: fixed;
@@ -19,6 +23,7 @@ nav {
     background-color: $header;
     z-index: 20; /* so its always on top */
     height: 5em;
+    width: 100%;
 
     /* CSS Transitions for Nav Bar Resizing */
     transition: all 0.4s;
@@ -91,11 +96,8 @@ nav {
         font-weight: $bold;
         color: #FFFFFF;
         font-size: 4rem;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
+        width: 1273px;
+        text-align: center;
         position: absolute;
         z-index: 10;
     }
@@ -105,11 +107,8 @@ nav {
         font-weight: $normal;
         color: #FFFFFF;
         font-size: 2rem;
-        width: 48%;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
+        width: 1273px;
+        text-align: center;
         position: absolute;
         z-index: 10;
     }
